@@ -1,0 +1,426 @@
+@media(max-width: 1400px) {
+  .header__logo-link {
+    margin-right: 50px;
+  }
+
+  .main__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.author__list {
+    max-height: 384px;
+  }
+}
+
+
+@media(max-width: 1260px) {
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__top {
+    width: 100%;
+  }
+
+  .burger  {
+    display: block;
+  }
+
+  .header__search-btn {
+    position: absolute;
+    display: block;
+    right: 39px;
+    transition: right .35s ease-in-out;
+    z-index: 6;
+  }
+
+  .header__search-btn svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .header__search-btn.search-active {
+    right: 243px;
+  }
+
+  .header__nav-search {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .header__search-form.search-form.search-active {
+    overflow: visible;
+    justify-content: end;
+    opacity: 1;
+    right: 25px;
+    transform: translateX(0);
+    width: 261px;
+    height: 36px;
+    background-color: #18171B;
+  }
+
+  .header__search-input::placeholder {
+    opacity: 0;
+  }
+
+  .header__menu-nav {
+    transition: transform .3s ease-in-out;
+    transform: translateX(-150%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 90px 0 90px 48px;
+    width: 100%;
+    text-align: left;
+    z-index: 7;
+  }
+
+  .header__menu-link {
+    font-size: 24px;
+    line-height: 64px;
+  }
+
+  .header__login {
+    padding: 19px 88px;
+    border-radius: 100px;
+    border: 2px solid var(--amethyst-color);
+    font-weight: 600;
+  }
+
+  .header__menu-nav.active {
+    transform: translateX(0);
+  }
+
+  .header__menu-list {
+    display: block;
+    margin-bottom: 85px;
+  }
+
+  .header__bottom{
+    display: none;
+  }
+}
+
+
+@media(max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 50px;
+  }
+
+  .header__logo-link {
+    margin-right: 0;
+  }
+
+  .hero {
+    padding: 113px 0 138px;
+  }
+
+  .article {
+    max-width: 657px;
+  }
+
+  .article__heading {
+    margin-bottom: 11px;
+  }
+
+  .article__description {
+    margin-bottom: 156px;
+  }
+
+  .content-swiper {
+    width: 596px;
+  }
+
+  .gallery {
+    padding: 79px 0;
+  }
+
+  .gallery__filter,
+  .gallery__descr,
+  .gallery__descr-info {
+    width: 280px;
+  }
+
+  .gallery__descr-info {
+    bottom: -8px;
+  }
+
+  .catalog__header {
+    align-items: normal;
+    margin-bottom: 6px;
+  }
+
+  .catalog__title {
+    margin-right: 33px;
+  }
+
+  .catalog__item {
+    margin-top: 10px;
+  }
+
+  .author__item {
+    margin-right: 65px;
+  }
+
+  .catalog__author {
+    margin-right: 50px;
+  }
+
+  .blank {
+    padding: 8px;
+    width: 189px;
+    height: 130px;
+  }
+
+  .blank-info {
+    width: 207px;
+  }
+
+  .events__content {
+    padding-left: 35px;
+    min-height: 483px;
+    padding-bottom: 55px;
+  }
+
+  .events__descr {
+    padding-right: 24px;
+  }
+
+  .events__descr-title {
+    line-height: 33px;
+  }
+
+  .events__descr-article {
+    padding-right: 6px;
+  }
+
+  .events__descr-btn {
+    margin-top: 26px;
+  }
+
+  .events-swiper {
+  margin-bottom: 25px;
+  }
+
+  .editions {
+    padding-bottom: 156px;
+  }
+
+  .editions__swiper {
+    width: 639px;
+  }
+
+  .editions-item {
+    min-height: 433px;
+  }
+
+  .book-content {
+    padding-top: 13px;
+  }
+
+  .book-header {
+    max-width: 150px;
+  }
+
+  .editions__price-inner {
+    bottom: -76px;
+  }
+
+  .partners-swiper {
+    max-width: 818px;
+  }
+
+  .btn-next,
+  .btn-prev {
+  bottom: 45px;
+  }
+
+  .contacts__descr {
+    padding-right: 102px;
+    padding-bottom: 102px;
+  }
+
+  .form__data {
+    width: 335px;
+  }
+
+  .contacts__social-item {
+    margin-right: 30px;
+  }
+
+  .footer__sobtn svg,
+  .contacts__social-link svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contacts__map {
+    max-height: 700px;
+  }
+
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer__social-item {
+    margin-left: 30px;
+  }
+}
+
+@media(max-width: 989px) {
+
+  .gallery {
+    padding: 80px 0 164px;
+  }
+
+  .gallery__inner {
+    flex-direction: column;
+  }
+
+  .gallery__descr,
+  .gallery__descr-info {
+    width: 100%;
+  }
+
+  .content-swiper {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .content-navigation {
+    margin-left: 0;
+  }
+
+  .gallery__descr-info {
+    bottom: -95px;
+  }
+
+  .catalog__header {
+    margin-bottom: 17px;
+  }
+
+  .catalog__title {
+    margin-right: 41px;
+  }
+
+  .catalog__item {
+    margin-top: 14px;
+  }
+
+  .catalog__item:not(:last-child) {
+    margin-right: 56px;
+  }
+
+  .catalog__text {
+    margin-bottom: 20px;
+  }
+
+  .catalog__descr {
+    flex-direction: column-reverse;
+  }
+
+  .catalog__author,
+  .catalog__tabs {
+    width: 100%;
+  }
+
+  .catalog__tabs {
+    margin-bottom: 50px;
+  }
+
+  .author__list {
+    max-height: 288px;
+  }
+
+  .author__item {
+    margin-right: 59px;
+  }
+
+  .events {
+    padding-top: 29px;
+  }
+
+  .events-swiper {
+    margin-bottom: 51px;
+  }
+
+  .editions {
+    padding-top: 84px;
+    padding-bottom: 80px;
+  }
+
+  .editions__category-title {
+    margin-bottom: 0;
+  }
+
+  .editions__category-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 160px;
+  }
+
+  .editions__item {
+    margin-right: 105px;
+    margin-bottom: 0;
+    line-height: 32px;
+  }
+
+  .editions__swiper {
+    width: 641px;
+    margin-top: 152px;
+  }
+
+  .editions-navigation {
+    padding-left: 0;
+  }
+
+  .editions__swiper-content {
+    padding-left: 27px;
+  }
+
+  .book-content {
+    padding-top: 16px;
+  }
+
+  .editions__price-inner {
+    bottom: 542px;
+  }
+
+  .projects__text {
+    margin-bottom: 30px;
+    max-width: 99%;
+  }
+
+  .projects__link {
+    white-space: nowrap;
+  }
+
+  .projects__partners-title {
+    margin-bottom: 33px;
+  }
+
+  .partners-swiper {
+    max-width: 562px;
+  }
+
+  .btn-next, .btn-prev {
+    bottom: 20px;
+  }
+
+  .contacts {
+    padding-top: 58px;
+  }
+
+  .contacts__descr {
+    padding-right: 44px;
+  }
+}
