@@ -1,5 +1,5 @@
-.header__logo-link:focus-visible,
-.footer__logo:focus-visible {
+.header__logo-link:focus,
+.footer__logo:focus {
   outline-offset: 4PX;
   outline: 2px solid var(--royal-purple-color);
 }
@@ -14,9 +14,9 @@
   color: var(--royal-purple-color);
 }
 
-.header__menu-link:focus-visible,
-.header__login:focus-visible,
-.main__item-btn:focus-visible {
+.header__menu-link:focus,
+.header__login:focus,
+.main__item-btn:focus {
   background-color: var(--royal-purple-color);
   outline-offset: 0;
   outline: 3px solid var(--royal-purple-color);
@@ -27,7 +27,7 @@
   color: var(--amethyst-color);
 }
 
-.header__search-input:focus-visible {
+.header__search-input:focus {
   border-bottom: 1px solid var(--royal-purple-color);
 }
 
@@ -37,7 +37,7 @@
 
 
 .main__item-link:hover,
-.main__item-link:focus-visible {
+.main__item-link:focus {
   border-color: var(--amethyst-color);
 }
 
@@ -56,7 +56,7 @@
   border-color: var(--biloba-flower-color);
 }
 
-.hero__btn:focus-visible {
+.hero__btn:focus {
   outline-offset: 3px;
   outline: 2px solid var(--heliotrope-color);
 }
@@ -71,7 +71,7 @@
   border: 2px solid var(--black-color);
 }
 
-.nav-btn:focus-visible {
+.nav-btn:focus {
   outline-offset: 0;
   outline: 2px solid var(--black-color);
 }
@@ -85,12 +85,12 @@
   border: 2px solid var(--biloba-flower-color);
 }
 
-.slide-focus:focus-visible {
+.slide-focus:focus {
   border: 3px solid var(--royal-purple-color);
 }
 
 .tabs__btn:hover,
-.tabs__btn:focus-visible {
+.tabs__btn:focus {
   box-shadow: 0px 0px 20px rgba(157, 92, 208, 0.7);
 }
 
@@ -98,7 +98,7 @@
   border: 2px solid var(--royal-purple-color);
 }
 
-.catalog__data:focus-visible .catalog__data-heading {
+.catalog__data:focus .catalog__data-heading {
   color: var(--white-color);
   background-color: var(--amethyst-color);
 }
@@ -117,7 +117,7 @@
   color: var(--amethyst-color);
 }
 
-.catalog__data:focus-visible .head-icon,
+.catalog__data:focus .head-icon,
 .catalog__data:hover .head-icon {
   background-color: var(--biloba-flower-color);
 }
@@ -141,8 +141,8 @@
   border-bottom: 1px solid transparent;
 }
 
-.author__link:focus-visible,
-.projects__link:focus-visible {
+.author__link:focus,
+.projects__link:focus {
   outline-offset: 0;
   outline: 3px solid var(--amethyst-color);
   color: var(--white-color);
@@ -159,7 +159,7 @@
   border-bottom: 1px solid  var(--black-color);
 }
 
-.events__descr-link:focus-visible {
+.events__descr-link:focus {
   color: var(--white-color);
   border-bottom: 1px solid var(--white-color);
   outline-offset: 0;
@@ -168,12 +168,12 @@
 }
 
 .editions__label:hover,
-.editions__label:focus-visible {
+.editions__label:focus {
   color: var(--heliotrope-color);
 }
 
 .editions__label:hover::before,
-.editions__label:focus-visible::before {
+.editions__label:focus::before {
   border: 1px solid var(--heliotrope-color);
 }
 
@@ -194,9 +194,9 @@
   outline: 3px solid var(--biloba-flower-color);
 }
 
-.events__link:focus-visible,
-.book-order-link:focus-visible,
-.contacts__btn:focus-visible {
+.events__link:focus,
+.book-order-link:focus,
+.contacts__btn:focus {
   outline-offset: 3px;
   outline: 2px solid var(--heliotrope-color);
 }
@@ -219,18 +219,18 @@
   background-color: var(--royal-purple-color);
 }
 
-.form-control:focus-visible {
+.form-control:focus {
   outline: 1px solid var(--white-color);
   background-color: var(--amethyst-color);
 }
 
 .contacts__input input:hover,
-.contacts__input input:focus-visible {
+.contacts__input input:focus {
   background-color: #eaeaea;
 }
 
 .contacts__social-link:hover svg,
-.contacts__social-link:focus-visible svg{
+.contacts__social-link:focus svg{
   opacity: .5;
 }
 
@@ -239,13 +239,13 @@
   border-radius: 50%;
   outline: 2px solid var(--amethyst-color);
 }
-.contacts__social-link:focus-visible,
-.footer__sobtn:focus-visible{
+.contacts__social-link:focus,
+.footer__sobtn:focus{
   outline: none;
 }
 
 .footer__sobtn:hover path,
-.footer__sobtn:focus-visible path {
+.footer__sobtn:focus path {
   fill: var(--white-color);
 }
 

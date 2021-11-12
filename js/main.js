@@ -357,7 +357,7 @@ let editionsSlider = new Swiper(".editions__swiper-content", {
     560: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 30,
+      spaceBetween: 0,
       grid: {
         rows: 4,
         fill: "row"

@@ -582,8 +582,24 @@
 
 @media(max-width: 717px) {
 
+  .container {
+    padding: 0 15px;
+  }
+
+  .editions-wrapper {
+    max-width: 100%;
+  }
+
+  .editions-item {
+    max-width: 290px;
+    margin-bottom: 50px;
+  }
+
+  .editions-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
 
   .editions__price-inner {
-    bottom: 1880px;
+    bottom: 2000px;
   }
 }
