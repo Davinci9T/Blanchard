@@ -1,13 +1,13 @@
-@media(max-width: 1400px) {
+@media(max-width: 1500px) {
   .header__logo-link {
     margin-right: 50px;
   }
 
-  .main__item:not(:last-child) {
+  .header__main-item:not(:last-child) {
     margin-right: 50px;
 }
 
-.author__list {
+.catalog__author-list {
     max-height: 384px;
   }
 }
@@ -106,6 +106,11 @@
   .header__bottom{
     display: none;
   }
+
+  .catalog__author,
+  .catalog__tabs {
+    max-width: 49%;
+  }
 }
 
 
@@ -166,12 +171,17 @@
     margin-top: 10px;
   }
 
-  .author__item {
+  .catalog__author-item {
     margin-right: 65px;
   }
 
   .catalog__author {
     margin-right: 50px;
+  }
+
+  .catalog__author,
+  .catalog__tabs {
+    width: 437px;
   }
 
   .blank {
@@ -248,7 +258,7 @@
     padding-bottom: 102px;
   }
 
-  .form__data {
+  .contacts__form-data {
     width: 335px;
   }
 
@@ -335,17 +345,22 @@
   .catalog__author,
   .catalog__tabs {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .catalog__author {
+    margin-right: 0;
   }
 
   .catalog__tabs {
     margin-bottom: 50px;
   }
 
-  .author__list {
+  .catalog__author-list {
     max-height: 288px;
   }
 
-  .author__item {
+  .catalog__author-item {
     margin-right: 59px;
   }
 
@@ -481,19 +496,19 @@
 }
 
   .h2-click,
-  .checkbox--label.checkbox--label-active {
+  .editions__label-checkbox.editions__label-checkbox-active {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
-  .checkbox--label.checkbox--label-active {
+  .editions__label-checkbox.editions__label-checkbox-active {
     padding: 13px 20px;
   }
 
-  .custom-checkbox--text {
+  .custom-checkbox-text {
     line-height: 22px;
   }
 
-  .checkbox--label {
+  .editions__label-checkbox {
     position: relative;
     padding-left: 25px;
     cursor: pointer;
@@ -502,7 +517,7 @@
     display: none;
   }
 
-  .checkbox--label-checked::after {
+  .editions__label-checkbox-checked::after {
     content: "x";
     position: absolute;
     outline: 1px solid var(--heliotrope-color);
@@ -525,7 +540,7 @@
   background-position: center;
   border: 1px solid var(--heliotrope-color);
   }
-  .checkbox:checked + .custom-checkbox + .custom-checkbox--text {
+  .checkbox:checked + .custom-checkbox + .custom-checkbox-text {
   color: var(--heliotrope-color);
   }
   .custom-checkbox {
@@ -551,10 +566,10 @@
   .checkbox:checked + .custom-checkbox:before  {
     opacity: 1;
   }
-  .checkbox--label {
+  .editions__label-checkbox {
     opacity: 1;
   }
-  .checkbox--label.checkbox--label-active {
+  .editions__label-checkbox.editions__label-checkbox-active {
     display: block;
   }
 
@@ -572,10 +587,10 @@
   }
 
   .contacts__map {
-    width: calc(288 / 668 * 100% + ((100vw - 100%) / 2));
+    width: 100%;
     height: 320px;
+    min-height: 320px;
     margin-right: -15px;
-    margin-left: -15px;
   }
 }
 
@@ -584,6 +599,10 @@
 
   .container {
     padding: 0 15px;
+  }
+
+  .editions {
+    background-image: url(../images/editions-bg-320.jpg);
   }
 
   .editions-wrapper {
@@ -601,5 +620,13 @@
 
   .editions__price-inner {
     bottom: 2000px;
+  }
+
+  .catalog__country-list {
+    justify-content: space-between;
+  }
+
+  .book-descr {
+    flex-direction: column;
   }
 }

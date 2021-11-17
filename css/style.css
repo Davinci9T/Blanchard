@@ -201,25 +201,25 @@ img {
   background-color: rgba(0, 0, 0, .4);
 }
 
-.main__list {
+.header__main-list {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-.main__item {
+.header__main-item {
   position: relative;
 }
 
-.main__item:not(:last-child) {
+.header__main-item:not(:last-child) {
   margin-right: 101px;
 }
 
-.main__item:last-child .main__item-btn::after {
+.header__main-item:last-child .header__main-item-btn::after {
   margin-left: 8px;
 }
 
-.main__item-btn {
+.header__main-item-btn {
   height: 100%;
   display: flex;
   align-items: center;
@@ -231,9 +231,9 @@ img {
   cursor: pointer;
 }
 
-.main__item p,
-.main__item button,
-.main__item span {
+.header__main-item p,
+.header__main-item button,
+.header__main-item span {
   font-family: 'OpenSans-Light', sans-serif;
   letter-spacing: 0.1rem;
   color: inherit;
@@ -241,7 +241,7 @@ img {
   border: none;
 }
 
-.main__item-btn::after {
+.header__main-item-btn::after {
   content: "";
   display: inline-block;
   width: 7px;
@@ -255,62 +255,62 @@ img {
   transform-origin: center;
 }
 
-.main__item-btn.is-active::after {
+.header__main-item-btn.is-active::after {
   transform: rotate(-45deg);
 }
 
 
-.main__dropdown {
+.header__main-dropdown {
   display: none;
   padding: 40px 20px 40px 40px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.main__dropdown-wrap {
+.header__main-dropdown-wrap {
   width: 240px;
   height: 220px;
 }
 
-.main__dropdown.is-active {
+.header__main-dropdown.is-active {
   position: absolute;
   z-index: 3;
 }
 
-.main__dropdown > ul {
+.header__main-dropdown > ul {
   margin: 0;
   padding-left: 0;
   list-style: none;
 }
 
-.main__dropdown.is-active {
+.header__main-dropdown.is-active {
   display: block;
   animation-name: dropdownOpen;
   animation-duration: 0.4s;
 }
 
-.main__dropdown.is-disabled {
+.header__main-dropdown.is-disabled {
   display: block;
   animation-name: dropdownClose;
   animation-duration: 0.4s;
 }
 
-.main__drop-list {
+.header__main-drop-list {
   list-style: none;
   padding-left: 0;
 }
 
-.main__dropdown-item {
+.header__main-dropdown-item {
   width: 220px;
   height: 40px;
   z-index: 7;
   background-color: purple;
 }
 
-.main__dropdown-item:not(:last-child) {
+.header__main-dropdown-item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.main__dropdown-item span {
+.header__main-dropdown-item span {
   z-index: 7;
   opacity: .4;
   background-color: purple;
@@ -318,7 +318,7 @@ img {
   height: 40px;
 }
 
-.main__item-link {
+.header__main-item-link {
   display: block;
   padding: 10px 15px;
   font-size: 14px;
@@ -328,10 +328,12 @@ img {
   width: 220px;
   height: 40px;
   z-index: 6;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.main__item-heading,
-.main__item-icon {
+.header__main-item-heading,
+.header__main-item-icon {
   color: inherit;
 }
 
@@ -415,12 +417,12 @@ img {
   background-image: url(../images/balla.jpg);
 }
 
-.main__dropdown .simplebar-track.simplebar-vertical {
+.header__main-dropdown .simplebar-track.simplebar-vertical {
   width: 2px;
   background-color: var(--black-color);
 }
 
-.main__dropdown
+.header__main-dropdown
 .simplebar-track.simplebar-vertical
 .simplebar-scrollbar:before {
   top: 0;
@@ -957,13 +959,13 @@ img {
   justify-content: space-between;
 }
 
-.catalog__author,
-.catalog__tabs {
-  width: 50%;
+.catalog__author {
+  max-width: 750px;
+  margin-right: 30px;
 }
 
-.catalog__author {
-  margin-right: 30px;
+.catalog__tabs {
+  width: 800px;
 }
 
 .catalog__author-pic {
@@ -1072,7 +1074,7 @@ img {
   transition: .2s;
 }
 
-.author__list {
+.catalog__author-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1081,7 +1083,7 @@ img {
 }
 
 
-.author__item {
+.catalog__author-item {
   margin-top: 16px;
   margin-right: 60px;
 }
@@ -1436,7 +1438,7 @@ input[type="number"]:focus {
   margin-bottom: 16px;
 }
 
-.tooltip__icon {
+.tooltip-icon {
   border: none;
   background: transparent;
   transform: translateY(3px);
@@ -1574,7 +1576,7 @@ input[type="number"]:focus {
   font-size: 24px;
 }
 
-.form__data {
+.contacts__form-data {
   width: 400px;
 }
 

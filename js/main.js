@@ -17,7 +17,7 @@ $(function () {
 // HEADER LIST ===============================================================================================
 
 const params = {
-  btnClassName: "main__item-btn",
+  btnClassName: "header__main-item-btn",
   activeClassName: "is-active",
   disabledClassName: "is-disabled"
 }
@@ -244,10 +244,10 @@ var evSlide = new Swiper(".events-swiper", {
 // SELECT-CHECKBOX
 
 let button = ".h2-click";
-let labels = ".checkbox--label";
-let labelsList = ".checkbox-list";
+let labels = ".editions__label-checkbox";
+let labelsList = ".editions__list-checkbox";
 let labelsListActive = "checklist-active";
-let labelActive = "checkbox--label-active";
+let labelActive = "editions__label-checkbox-active";
 let animationClass = "animation-test";
 let inputCheckbox = ".checkbox";
 
@@ -266,7 +266,7 @@ function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, 
     if (!listLabels.classList.contains(labelsListActive)) {
       listLabels.classList.add(labelsListActive);
       labels.forEach(item => {
-        // item.classList.add("checkbox--label-active");
+        // item.classList.add("editions__label-checkbox-active");
         animationItem(item, labelActive, animationClass, "add");
       })
     } else {
@@ -315,7 +315,7 @@ checkboxToggle(button, labels, labelsList, labelsListActive, labelActive, animat
 $(function () {
   $('.h2-click').on('click', function () {
     $('.h2-click').toggleClass('active');
-    $('.checkbox-list').toggleClass('active');
+    $('.editions__list-checkbox').toggleClass('active');
   });
 
 });
