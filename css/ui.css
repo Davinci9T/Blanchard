@@ -252,3 +252,9 @@
 .footer__sobtn:active path {
   fill: var(--amethyst-color);
 }
+
+
+.partners-img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}

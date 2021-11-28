@@ -14,6 +14,7 @@ $(function () {
   });
 });
 
+
 // HEADER LIST ===============================================================================================
 
 const params = {
@@ -217,6 +218,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+// ruslan Dangeon Master / Boss of the GYM
+
+document.querySelectorAll('.catalog__author-link').forEach((item) => {
+  item.addEventListener('click', (event) => {
+    //отмена действия ссылки по умолчанию
+    event.preventDefault();
+
+    //можно без этого сделать
+    let picLink = document.querySelector('.catalog__author-pic-link');
+    picLink.src = 'images/absent-author-img.png';
+    picLink.alt = 'Пока ничего...'
+
+    document.querySelector('.Founded').style.display = 'none'
+    document.querySelector('.notFounded').style.display = 'block'
+
+  });
+});
+
+Array.from(document.querySelectorAll('.catalog__author-link')).filter(item => item.innerHTML === 'Доменико Гирландайо')[0].addEventListener('click', (event) => {
+  event.preventDefault();
+  let picLink = document.querySelector('.catalog__author-pic-link');
+  picLink.src = 'images/author-img.jpg';
+  picLink.alt = 'Доменико Гирландайо';
+
+  document.querySelector('.notFounded').style.display = 'none'
+  document.querySelector('.Founded').style.display = 'block'
+})
+
+//наставки скиллбээээкса сделайте чтобы в этом задании данные брались из jsonчика пж, ебать хуйня иначе
+
+
+
+// EVENTS
 
 
 var evSlide = new Swiper(".events-swiper", {
@@ -484,4 +519,14 @@ new JustValidate('.form', {
     tel: 'Недопустимый формат',
   },
   colorWrong: '#D11616'
+});
+
+
+// карточки события
+
+
+$(function () {
+  $('.events__link').on('click', function () {
+    $('.item-card').toggleClass('active');
+  });
 });

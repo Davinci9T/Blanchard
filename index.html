@@ -594,11 +594,16 @@
           <div class="tab-content tab-content-active" data-target="italy">
             <div class="catalog__descr">
               <div class="catalog__author">
-                <div class="catalog__author-pic"><img src="images/author-img.jpg" alt="Доменико Гирландайо"></div>
-                <div class="catalog__info">
+                <div class="catalog__author-pic"><img class="catalog__author-pic-link" src="images/author-img.jpg" alt="Доменико Гирландайо"></div>
+                <div class="catalog__info Founded">
                   <h3 class="author-title">Доменико Гирландайо</h3>
                   <p class="author-descr"><span class="author-birthday">2 июня 1448 — 11 января 1494.</span><br>
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени)..</p>
+                </div>
+                <div class="catalog__info notFounded" style="display: none">
+                  <h3 class="author-title">Что мы о нём знаем?</h3>
+                  <p class="author-descr">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+                  <a href="" class="descr-link">В галерею</a>
                 </div>
               </div>
               <div class="catalog__tabs">
@@ -609,7 +614,7 @@
                     </div>
                     <div class="content">
                       <ul class="catalog__author-list">
-                        <li class="catalog__author-item"><a href="" class="catalog__author-link">Бенедетто ди Биндо</a></li>
+                        <li class="catalog__author-item"><a href="#" class="catalog__author-link">Бенедетто ди Биндо</a></li>
                         <li class="catalog__author-item"><a href="" class="catalog__author-link">Бергоньоне, Амброджо</a></li>
                         <li class="catalog__author-item"><a href="" class="catalog__author-link">Биссоло, Франческо</a></li>
                         <li class="catalog__author-item"><a href="" class="catalog__author-link">Больтраффио, Джованни</a></li>
@@ -944,115 +949,112 @@
         <div class="events__inner ">
 
           <!-- Swiper -->
-          <div class="swiper swiper-container events-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide events-slide">
-                <div class="events__col">
-                  <picture>
-                    <source srcset="images/eventspic1.jpg" media="(min-width: 1025px)">
-                    <source srcset="images/eventspic1-768.jpg" media="(max-width: 989px)">
-                    <source srcset="images/eventspic1-1024.jpg" media="(max-width: 1024px)">
-                    <img src="images/eventspic1.jpg" alt="обложка карточки">
-                  </picture>
-                  <div class="events__content">
-                    <p class="events__text">Музей им. Щусева<br />с 20 марта по 30 апреля</p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">Книжная гравюра в живом восприятии</h3>
-                      <p class="events__descr-article">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
-                      </p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a href="#" class="events__descr-link">Подробнее</a>
-                    </div>
-                  </div>
+          <div class="events-swiper">
 
+            <div class="events__item events-slide">
+              <div class="events__col">
+                <picture>
+                  <source srcset="images/eventspic1.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic1-768.jpg" media="(max-width: 989px)">
+                  <source srcset="images/eventspic1-1024.jpg" media="(max-width: 1024px)">
+                  <img src="images/eventspic1.jpg" alt="обложка карточки">
+                </picture>
+                <div class="events__content">
+                  <p class="events__text">Музей им. Щусева<br />с 20 марта по 30 апреля</p>
+                  <div class="events__descr">
+                    <h3 class="events__descr-title">Книжная гравюра в живом восприятии</h3>
+                    <p class="events__descr-article">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                    </p>
+                  </div>
+                  <div class="events__descr-btn">
+                    <a href="#" class="events__descr-link">Подробнее</a>
+                  </div>
                 </div>
+
               </div>
-              <div class="swiper-slide events-slide">
-                <div class="events__col">
-                  <picture>
-                    <source srcset="images/eventspic2.jpg" media="(min-width: 1025px)">
-                    <source srcset="images/eventspic2-768.jpg" media="(max-width: 989px)">
-                    <source srcset="images/eventspic2-1024.jpg" media="(max-width: 1024px)">
-                    <img src="images/eventspic2.jpg" alt="обложка карточки">
-                  </picture>
-                  <div class="events__content">
-                    <p class="events__text">ММОМА <br> 24 марта 19:00</p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">«Открытая дискуссия». Дмитрий Петров&nbsp;и Сергей Ильин.</h3>
-                      <p class="events__descr-article">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a href="#" class="events__descr-link">Подробнее</a>
-                    </div>
+            </div>
+            <div class="events__item events-slide">
+              <div class="events__col">
+                <picture>
+                  <source srcset="images/eventspic2.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic2-768.jpg" media="(max-width: 989px)">
+                  <source srcset="images/eventspic2-1024.jpg" media="(max-width: 1024px)">
+                  <img src="images/eventspic2.jpg" alt="обложка карточки">
+                </picture>
+                <div class="events__content">
+                  <p class="events__text">ММОМА <br> 24 марта 19:00</p>
+                  <div class="events__descr">
+                    <h3 class="events__descr-title">«Открытая дискуссия». Дмитрий Петров&nbsp;и Сергей Ильин.</h3>
+                    <p class="events__descr-article">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                  </div>
+                  <div class="events__descr-btn">
+                    <a href="#" class="events__descr-link">Подробнее</a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide events-slide">
-                <div class="events__col">
-                  <picture>
-                    <source srcset="images/eventspic3.jpg" media="(min-width: 1025px)">
-                    <source srcset="images/eventspic3-768.jpg" media="(max-width: 989px)">
-                    <source srcset="images/eventspic3-1024.jpg" media="(max-width: 1024px)">
-                    <img src="images/eventspic3.jpg" alt="обложка карточки">
-                  </picture>
-                  <div class="events__content">
-                    <p class="events__text">Еврейский музей <br> с 31 марта по 21 апреля</p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">Выставка «Формация 2020»</h3>
-                      <p class="events__descr-article">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a href="#" class="events__descr-link">Подробнее</a>
-                    </div>
+            </div>
+            <div class="events__item events-slide">
+              <div class="events__col">
+                <picture>
+                  <source srcset="images/eventspic3.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic3-768.jpg" media="(max-width: 989px)">
+                  <source srcset="images/eventspic3-1024.jpg" media="(max-width: 1024px)">
+                  <img src="images/eventspic3.jpg" alt="обложка карточки">
+                </picture>
+                <div class="events__content">
+                  <p class="events__text">Еврейский музей <br> с 31 марта по 21 апреля</p>
+                  <div class="events__descr">
+                    <h3 class="events__descr-title">Выставка «Формация 2020»</h3>
+                    <p class="events__descr-article">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                  </div>
+                  <div class="events__descr-btn">
+                    <a href="#" class="events__descr-link">Подробнее</a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide events-slide">
-                <div class="events__col">
-                  <picture>
-                    <source srcset="images/eventspic4.jpg" media="(min-width: 1025px)">
-                    <source srcset="images/eventspic4-768.jpg" media="(max-width: 989px)">
-                    <source srcset="images/eventspic4-1024.jpg" media="(max-width: 1024px)">
-                    <img src="images/eventspic4.jpg" alt="обложка карточки">
-                  </picture>
-                  <div class="events__content">
-                    <p class="events__text">Третьяковка на Крымском валу <br> с 30 марта по 30 апреля</p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">XXIV Международная биеннале молодого искусства</h3>
-                      <p class="events__descr-article">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a href="#" class="events__descr-link">Подробнее</a>
-                    </div>
+            </div>
+            <div class="events__item events-slide item-card">
+              <div class="events__col">
+                <picture>
+                  <source srcset="images/eventspic4.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic4-768.jpg" media="(max-width: 989px)">
+                  <source srcset="images/eventspic4-1024.jpg" media="(max-width: 1024px)">
+                  <img src="images/eventspic4.jpg" alt="обложка карточки">
+                </picture>
+                <div class="events__content">
+                  <p class="events__text">Третьяковка на Крымском валу <br> с 30 марта по 30 апреля</p>
+                  <div class="events__descr">
+                    <h3 class="events__descr-title">XXIV Международная биеннале молодого искусства</h3>
+                    <p class="events__descr-article">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+                  </div>
+                  <div class="events__descr-btn">
+                    <a href="#" class="events__descr-link">Подробнее</a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide events-slide">
-                <div class="events__col">
-                  <picture>
-                    <source srcset="images/eventspic5.jpg" media="(min-width: 1025px)">
-                    <source srcset="images/eventspic5-768.jpg" media="(max-width: 989px)">
-                    <source srcset="images/eventspic5-1024.jpg" media="(max-width: 1024px)">
-                    <img src="images/eventspic5.jpg" alt="обложка карточки">
-                  </picture>
-                  <div class="events__content">
-                    <p class="events__text">ММАМ <br> с 8 апреля по 20 мая</p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                      <p class="events__descr-article">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a href="#" class="events__descr-link">Подробнее</a>
-                    </div>
+            </div>
+            <div class="events__item events-slide item-card">
+              <div class="events__col">
+                <picture>
+                  <source srcset="images/eventspic5.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic5-768.jpg" media="(max-width: 989px)">
+                  <source srcset="images/eventspic5-1024.jpg" media="(max-width: 1024px)">
+                  <img src="images/eventspic5.jpg" alt="обложка карточки">
+                </picture>
+                <div class="events__content">
+                  <p class="events__text">ММАМ <br> с 8 апреля по 20 мая</p>
+                  <div class="events__descr">
+                    <h3 class="events__descr-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                    <p class="events__descr-article">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                  </div>
+                  <div class="events__descr-btn">
+                    <a href="#" class="events__descr-link">Подробнее</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="events__btn">
-            <a href="#" class="events__link">Все события</a>
-          </div>
+          <button class="events__link">Все события</button>
         </div>
       </div>
     </section>
@@ -1368,60 +1370,60 @@
         <div class="partners-content">
           <div class="swiper partners-swiper">
             <div class="swiper-wrapper partners-wrapper">
-              <div class="swiper-slide projects-slide">
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner1.png">
-                  <img src="images/partner1.png" alt="freelands foundation">
+                  <img class="partners-img" src="images/partner1.png" alt="freelands foundation">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner2.png">
-                  <img src="images/partner2.png" alt="institute for contemporary art">
+                  <img class="partners-img" src="images/partner2.png" alt="institute for contemporary art">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner3.png">
-                  <img src="images/partner3.png" alt="workhouse arts center">
+                  <img class="partners-img" src="images/partner3.png" alt="workhouse arts center">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner4.png">
-                  <img src="images/partner4.png" alt="1849 wine company">
+                  <img class="partners-img" src="images/partner4.png" alt="1849 wine company">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner5.png">
-                  <img src="images/partner5.png" alt="hiscox">
+                  <img class="partners-img" src="images/partner5.png" alt="hiscox">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner6.png">
-                  <img src="images/partner6.png" alt="camden arts centre">
+                  <img class="partners-img" src="images/partner6.png" alt="camden arts centre">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner7.png">
-                  <img src="images/partner7.png" alt="stassen premium belgian cider">
+                  <img class="partners-img" src="images/partner7.png" alt="stassen premium belgian cider">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner8.png">
-                  <img src="images/partner8.png" alt="watts gallery artists' village">
+                  <img class="partners-img" src="images/partner8.png" alt="watts gallery artists' village">
                 </picture>
-              </div>
-              <div class="swiper-slide projects-slide">
+              </a>
+              <a href="#" class="swiper-slide projects-slide">
                 <picture>
                   <source srcset="images/partner9.png">
-                  <img src="images/partner9.png" alt="esad">
+                  <img class="partners-img" src="images/partner9.png" alt="esad">
                 </picture>
-              </div>
+              </a>
             </div>
           </div>
           <div class="partners-navigation">
@@ -1447,11 +1449,9 @@
               <legend class="contacts__text">Заказать обратный звонок</legend>
               <div class="section contacts__form-data">
                 <form action="#" class="form" method="POST">
-                  <button class="contacts__btn">Заказать</button>
-
-                  <div class="contacts__input"><input class="tel" id="tel" type="tel" required placeholder="Телефон*" name="Телефон" data-validate-field="tel" data-validate-rules="phone" aria-label="введите свой телефон"></div>
-
                   <div class="contacts__input"><input class="name" id="name" type="text" required placeholder="Имя*" name="Имя" data-validate-field="name" aria-label="введите своё имя"></div>
+                  <div class="contacts__input"><input class="tel" id="tel" type="tel" required placeholder="Телефон*" name="Телефон" data-validate-field="tel" data-validate-rules="phone" aria-label="введите свой телефон"></div>
+                  <button class="contacts__btn">Заказать</button>
                 </form>
               </div>
             </fieldset>
