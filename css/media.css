@@ -632,7 +632,7 @@
 }
 
 
-@media (max-width: 580px) {
+@media (max-width: 717px) {
   .events-swiper {
     flex-wrap: nowrap;
   }

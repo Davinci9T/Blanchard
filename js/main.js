@@ -252,7 +252,7 @@ Array.from(document.querySelectorAll('.catalog__author-link')).filter(item => it
 // EVENTS
 
 (() => {
-  const MOBILE_WIDTH = 580;
+  const MOBILE_WIDTH = 717;
   const DESKTOP_WIDTH = 989;
   const btn = document.querySelector(".js-show");
 
@@ -375,6 +375,7 @@ Array.from(document.querySelectorAll('.catalog__author-link')).filter(item => it
     checkWindowWidthMobile(sliderMobileParams);
   });
 })();
+
 
 
 // EDITIONS =====================================================================================================================
