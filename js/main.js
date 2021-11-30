@@ -1,7 +1,7 @@
 $(function () {
   $('.burger').on('click', function () {
     $('.header__menu-nav').toggleClass('active');
-    $('.burger').toggleClass('active')
+    $('.burger').toggleClass('active');
     $('#search').removeClass('search-active');
     $('.search-form').removeClass('search-active');
   });
@@ -21,7 +21,7 @@ const params = {
   btnClassName: "header__main-item-btn",
   activeClassName: "is-active",
   disabledClassName: "is-disabled"
-}
+};
 
 function onDisable(evt) {
   if (evt.target.classList.contains(params.disabledClassName)) {
@@ -172,38 +172,38 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 // TABS
 
 function slidesPlugin(activeSlide = 2) {
-  const slides = document.querySelectorAll('.tabs__btn')
+  const slides = document.querySelectorAll('.tabs__btn');
 
-  slides[activeSlide].classList.add('active')
+  slides[activeSlide].classList.add('active');
 
   for (const slide of slides) {
     slide.addEventListener('click', () => {
-      clearActiveClasses()
-      slide.classList.add('active')
+      clearActiveClasses();
+      slide.classList.add('active');
     });
   }
 
   function clearActiveClasses() {
     slides.forEach((slide) => {
-      slide.classList.remove('active')
+      slide.classList.remove('active');
     });
   }
 }
 
-slidesPlugin()
+slidesPlugin();
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.tabs__btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (event) {
-      const path = event.currentTarget.dataset.path
+      const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll('.tab-content').forEach(function (tabContent) {
-        tabContent.classList.remove('tab-content-active')
+        tabContent.classList.remove('tab-content-active');
       });
       document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active');
-    })
-  })
-})
+    });
+  });
+});
 
 
 // ACCORDION
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// ruslan Dangeon Master / Boss of the GYM
+// Выбор художника
 
 document.querySelectorAll('.catalog__author-link').forEach((item) => {
   item.addEventListener('click', (event) => {
@@ -229,10 +229,10 @@ document.querySelectorAll('.catalog__author-link').forEach((item) => {
     //можно без этого сделать
     let picLink = document.querySelector('.catalog__author-pic-link');
     picLink.src = 'images/absent-author-img.png';
-    picLink.alt = 'Пока ничего...'
+    picLink.alt = 'Пока ничего...';
 
-    document.querySelector('.Founded').style.display = 'none'
-    document.querySelector('.notFounded').style.display = 'block'
+    document.querySelector('.Founded').style.display = 'none';
+    document.querySelector('.notFounded').style.display = 'block';
 
   });
 });
@@ -243,36 +243,139 @@ Array.from(document.querySelectorAll('.catalog__author-link')).filter(item => it
   picLink.src = 'images/author-img.jpg';
   picLink.alt = 'Доменико Гирландайо';
 
-  document.querySelector('.notFounded').style.display = 'none'
-  document.querySelector('.Founded').style.display = 'block'
-})
-
-//наставки скиллбээээкса сделайте чтобы в этом задании данные брались из jsonчика пж, ебать хуйня иначе
+  document.querySelector('.notFounded').style.display = 'none';
+  document.querySelector('.Founded').style.display = 'block';
+});
 
 
 
 // EVENTS
 
+(() => {
+  const MOBILE_WIDTH = 580;
+  const DESKTOP_WIDTH = 989;
+  const btn = document.querySelector(".js-show");
 
-var evSlide = new Swiper(".events-swiper", {
-  loop: true,
-  breakpoints: {
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
+  const sliderMobileParams = {
+    paginationClassName: "events-pagination",
+    cardsContainerName: "js-slider",
+    cardsWrapName: "js-slides-wrap",
+    card: "events-slide",
+    hiddenClass: "is-hidden"
+  };
 
-    989: {
-      slidesPerView: 3,
-      spaceBetween: 27,
-    },
-
-    560: {
-      slidesPerView: 2,
-      spaceBetween: 34,
-    },
+  function getWindowWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.body.clientWidth,
+      document.documentElement.clientWidth
+    );
   }
-});
+
+  function activateMobileSlider(params) {
+    const pagination = document.createElement("div");
+    pagination.classList.add(params.paginationClassName);
+    params.cardsContainer.append(pagination);
+
+    params.cardsContainer.classList.add("swiper-container");
+    params.cardsWrap.classList.add("swiper-wrapper");
+
+    params.cardsSlider = new Swiper(`.${params.cardsContainerName}`, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: `.${params.cardsContainerName} .${params.paginationClassName}`
+      },
+
+      on: {
+        beforeInit() {
+          document.querySelectorAll(`.${params.card}`).forEach((el) => {
+            el.classList.add("swiper-slide");
+          });
+        },
+
+        beforeDestroy() {
+          this.slides.forEach((el) => {
+            el.classList.remove("swiper-slide");
+            el.removeAttribute("role");
+            el.removeAttribute("aria-label");
+          });
+
+          this.pagination.el.remove();
+        }
+      }
+    });
+  }
+
+  function destroyMobileSlider(params) {
+    params.cardsSlider.destroy();
+    params.cardsContainer.classList.remove("swiper-container");
+    params.cardsWrap.classList.remove("swiper-wrapper");
+    params.cardsWrap.removeAttribute("aria-live");
+    params.cardsWrap.removeAttribute("id");
+  }
+
+  function setHiddenCards(params, windowWidth) {
+    const cards = document.querySelectorAll(`.${params.card}`);
+    let quantity = cards.length;
+
+    if (windowWidth > MOBILE_WIDTH && windowWidth < DESKTOP_WIDTH) {
+      quantity = 2;
+    }
+
+    if (windowWidth >= DESKTOP_WIDTH) {
+      quantity = 3;
+    }
+
+    cards.forEach((card, i) => {
+      card.classList.remove(params.hiddenClass);
+      if (i >= quantity) {
+        card.classList.add(params.hiddenClass);
+      }
+    });
+  }
+
+  function showCards(e) {
+    const cards = document.querySelectorAll(`.${sliderMobileParams.card}`);
+
+    e.target.style = "display: none";
+
+    cards.forEach((card) => {
+      card.classList.remove(sliderMobileParams.hiddenClass);
+    });
+  }
+
+  function checkWindowWidthMobile(params) {
+    const currentWidth = getWindowWidth();
+    btn.style = "";
+    params.cardsContainer = document.querySelector(
+      `.${params.cardsContainerName}`
+    );
+    params.cardsWrap = document.querySelector(`.${params.cardsWrapName}`);
+
+    if (
+      currentWidth <= MOBILE_WIDTH &&
+      (!params.cardsSlider || params.cardsSlider.destroyed)
+    ) {
+      activateMobileSlider(params);
+    } else if (currentWidth > MOBILE_WIDTH && params.cardsSlider) {
+      destroyMobileSlider(params);
+    }
+
+    setHiddenCards(params, currentWidth);
+  }
+
+  checkWindowWidthMobile(sliderMobileParams);
+  btn.addEventListener("click", showCards);
+
+  window.addEventListener("resize", function () {
+    checkWindowWidthMobile(sliderMobileParams);
+  });
+})();
+
 
 // EDITIONS =====================================================================================================================
 
@@ -296,14 +399,15 @@ function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, 
     if (e.code === "Enter") {
       toggleSpoiler();
     }
-  })
+  });
+
   function toggleSpoiler() {
     if (!listLabels.classList.contains(labelsListActive)) {
       listLabels.classList.add(labelsListActive);
       labels.forEach(item => {
         // item.classList.add("editions__label-checkbox-active");
         animationItem(item, labelActive, animationClass, "add");
-      })
+      });
     } else {
       listLabels.classList.remove(labelsListActive);
       labels.forEach(item => {
@@ -320,19 +424,20 @@ function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, 
           animationItem(this, labelActive, animationClass, "remove");
         }
       });
-    })
+    });
   }
+
   function animationItem(item, class1, class2, f) {
     if (f === "add") {
       item.classList.add(class1);
       setTimeout(function () {
-        item.classList.add(class2)
+        item.classList.add(class2);
       }, 100);
 
     } else {
       item.classList.remove(class2);
       setTimeout(function () {
-        item.classList.remove(class1)
+        item.classList.remove(class1);
       }, 300);
     }
 
@@ -340,7 +445,6 @@ function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, 
 
 
 }
-
 
 
 checkboxToggle(button, labels, labelsList, labelsListActive, labelActive, animationClass, inputCheckbox);
@@ -408,7 +512,7 @@ tippy('#tooltip-one', {
   allowHTML: true,
   arrow: true,
   theme: 'tomato',
-})
+});
 
 tippy('#tooltip-two', {
   content: '<p style="min-height: 55px; text-align: center; font-size: 12px; font-weight: 600;">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  </p>',
@@ -416,7 +520,7 @@ tippy('#tooltip-two', {
   allowHTML: true,
   arrow: true,
   theme: 'tomato',
-})
+});
 
 tippy('#tooltip-three', {
   content: '<p style="min-height: 25px; text-align: center; font-size: 12px; font-weight: 600;">В стремлении повысить качество </p>',
@@ -424,7 +528,7 @@ tippy('#tooltip-three', {
   allowHTML: true,
   arrow: true,
   theme: 'tomato',
-})
+});
 
 var partnersSlide = new Swiper(".partners-swiper", {
   loop: true,
@@ -509,8 +613,8 @@ new JustValidate('.form', {
     tel: {
       required: true,
       function: (name, value) => {
-        const phone = selector.inputmask.unmaskedvalue()
-        return Number(phone) && phone.length === 10
+        const phone = selector.inputmask.unmaskedvalue();
+        return Number(phone) && phone.length === 10;
       }
     },
   },
@@ -525,8 +629,4 @@ new JustValidate('.form', {
 // карточки события
 
 
-$(function () {
-  $('.events__link').on('click', function () {
-    $('.item-card').toggleClass('active');
-  });
-});
+

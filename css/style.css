@@ -1150,47 +1150,28 @@ img {
   margin-bottom: 16px;
 }
 
+.slider {
+  overflow: hidden;
+}
+
 .events-swiper {
-  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
+  margin-right: -50px;
 }
 
 .events__item {
   position: relative;
   display: flex;
+  flex-direction: column;
   margin-bottom: 50px;
-  max-width: 500px;
+  margin-right: 50px;
+  width: calc(100% / 3 - 50px);
   height: auto;
 }
 
-.events__item:not(:nth-child(3n)) {
-  margin-right: 50px;
-}
-
-.item-card {
+.events__item.is-hidden {
   display: none;
-}
-
-.item-card.active {
-  display: block;
-}
-
-.item-card .events__col {
-  position: relative;
-  opacity: 0;
-  transition: transform .5s ease-in;
-  transform: translateY(-100px);
-}
-
-.item-card.active .events__col {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.events__col {
-  display: flex;
-  flex-direction: column;
 }
 
 .events__content {
@@ -1239,7 +1220,7 @@ img {
   border-bottom: 1px solid var(--amethyst-color);
 }
 
-.events__link {
+.events__btn {
   display: block;
   margin-right: auto;
   margin-left: auto;

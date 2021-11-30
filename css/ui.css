@@ -177,14 +177,14 @@
   border: 1px solid var(--heliotrope-color);
 }
 
-.events__link:hover,
+.events__btn:hover,
 .book-order-link:hover,
 .contacts__btn:hover {
   color: var(--white-color);
   background-color: var(--amethyst-color);
 }
 
-.events__link:active,
+.events__btn:active,
 .book-order-link:active,
 .contacts__btn:active {
   color: var(--white-color);
@@ -194,7 +194,7 @@
   outline: 3px solid var(--biloba-flower-color);
 }
 
-.events__link:focus-visible,
+.events__btn:focus-visible,
 .book-order-link:focus-visible,
 .contacts__btn:focus-visible {
   outline-offset: 3px;

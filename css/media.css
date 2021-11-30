@@ -376,8 +376,8 @@
     margin-bottom: 51px;
   }
 
-  .events__col {
-    max-width: 317px;
+  .events__item {
+    width: calc(100% / 2 - 50px);
   }
 
   .editions {
@@ -628,5 +628,21 @@
 
   .book-descr {
     flex-direction: column;
+  }
+}
+
+
+@media (max-width: 580px) {
+  .events-swiper {
+    flex-wrap: nowrap;
+  }
+
+  .events__item {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .events__btn {
+    display: none;
   }
 }
