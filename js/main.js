@@ -1,18 +1,21 @@
-$(function () {
-  $('.burger').on('click', function () {
-    $('.header__menu-nav').toggleClass('active');
-    $('.burger').toggleClass('active');
-    $('#search').removeClass('search-active');
-    $('.search-form').removeClass('search-active');
-  });
+document.addEventListener('DOMContentLoaded', function () {
+  $(function () {
+    $('.burger').on('click', function () {
+      $('.header__menu-nav').toggleClass('active');
+      $('.burger').toggleClass('active');
+      $('#search').removeClass('search-active');
+      $('.search-form').removeClass('search-active');
+    });
 
-  $('#search').on('click', function () {
-    $('.search-form').toggleClass('search-active');
-    $('#search').toggleClass('search-active');
-    $('.header__menu-nav').removeClass('active');
-    $('.burger').removeClass('active');
+    $('#search').on('click', function () {
+      $('.search-form').toggleClass('search-active');
+      $('#search').toggleClass('search-active');
+      $('.header__menu-nav').removeClass('active');
+      $('.burger').removeClass('active');
+    });
   });
 });
+
 
 
 // HEADER LIST ===============================================================================================
@@ -171,26 +174,29 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 
 // TABS
 
-function slidesPlugin(activeSlide = 2) {
-  const slides = document.querySelectorAll('.tabs__btn');
 
-  slides[activeSlide].classList.add('active');
+document.addEventListener('DOMContentLoaded', function () {
+  function slidesPlugin(activeSlide = 2) {
+    const slides = document.querySelectorAll('.tabs__btn');
 
-  for (const slide of slides) {
-    slide.addEventListener('click', () => {
-      clearActiveClasses();
-      slide.classList.add('active');
-    });
+    slides[activeSlide].classList.add('active');
+
+    for (const slide of slides) {
+      slide.addEventListener('click', () => {
+        clearActiveClasses();
+        slide.classList.add('active');
+      });
+    }
+
+    function clearActiveClasses() {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+      });
+    }
   }
 
-  function clearActiveClasses() {
-    slides.forEach((slide) => {
-      slide.classList.remove('active');
-    });
-  }
-}
-
-slidesPlugin();
+  slidesPlugin();
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.tabs__btn').forEach(function (tabsBtn) {
@@ -221,160 +227,164 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Выбор художника
 
-document.querySelectorAll('.catalog__author-link').forEach((item) => {
-  item.addEventListener('click', (event) => {
-    //отмена действия ссылки по умолчанию
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelectorAll('.catalog__author-link').forEach((item) => {
+    item.addEventListener('click', (event) => {
+      //отмена действия ссылки по умолчанию
+      event.preventDefault();
+
+      //можно без этого сделать
+      let picLink = document.querySelector('.catalog__author-pic-link');
+      picLink.src = 'images/absent-author-img.png';
+      picLink.alt = 'Пока ничего...';
+
+      document.querySelector('.Founded').style.display = 'none';
+      document.querySelector('.notFounded').style.display = 'block';
+
+    });
+  });
+
+  Array.from(document.querySelectorAll('.catalog__author-link')).filter(item => item.innerHTML === 'Доменико Гирландайо')[0].addEventListener('click', (event) => {
     event.preventDefault();
-
-    //можно без этого сделать
     let picLink = document.querySelector('.catalog__author-pic-link');
-    picLink.src = 'images/absent-author-img.png';
-    picLink.alt = 'Пока ничего...';
+    picLink.src = 'images/author-img.jpg';
+    picLink.alt = 'Доменико Гирландайо';
 
-    document.querySelector('.Founded').style.display = 'none';
-    document.querySelector('.notFounded').style.display = 'block';
-
+    document.querySelector('.notFounded').style.display = 'none';
+    document.querySelector('.Founded').style.display = 'block';
   });
 });
 
-Array.from(document.querySelectorAll('.catalog__author-link')).filter(item => item.innerHTML === 'Доменико Гирландайо')[0].addEventListener('click', (event) => {
-  event.preventDefault();
-  let picLink = document.querySelector('.catalog__author-pic-link');
-  picLink.src = 'images/author-img.jpg';
-  picLink.alt = 'Доменико Гирландайо';
-
-  document.querySelector('.notFounded').style.display = 'none';
-  document.querySelector('.Founded').style.display = 'block';
-});
 
 
+// EVENTS ===============================================================================================
+document.addEventListener('DOMContentLoaded', function () {
+  (() => {
+    const MOBILE_WIDTH = 600;
+    const DESKTOP_WIDTH = 989;
+    const btn = document.querySelector(".js-show");
 
-// EVENTS
+    const sliderMobileParams = {
+      paginationClassName: "events-pagination",
+      cardsContainerName: "js-slider",
+      cardsWrapName: "js-slides-wrap",
+      card: "events-slide",
+      hiddenClass: "hidden"
+    };
 
-(() => {
-  const MOBILE_WIDTH = 717;
-  const DESKTOP_WIDTH = 989;
-  const btn = document.querySelector(".js-show");
+    function getWindowWidth() {
+      return Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.body.clientWidth,
+        document.documentElement.clientWidth
+      );
+    }
 
-  const sliderMobileParams = {
-    paginationClassName: "events-pagination",
-    cardsContainerName: "js-slider",
-    cardsWrapName: "js-slides-wrap",
-    card: "events-slide",
-    hiddenClass: "is-hidden"
-  };
+    function activateMobileSlider(params) {
+      const pagination = document.createElement("div");
+      pagination.classList.add(params.paginationClassName);
+      params.cardsContainer.append(pagination);
 
-  function getWindowWidth() {
-    return Math.max(
-      document.body.scrollWidth,
-      document.documentElement.scrollWidth,
-      document.body.offsetWidth,
-      document.documentElement.offsetWidth,
-      document.body.clientWidth,
-      document.documentElement.clientWidth
-    );
-  }
+      params.cardsContainer.classList.add("swiper-container");
+      params.cardsWrap.classList.add("swiper-wrapper");
 
-  function activateMobileSlider(params) {
-    const pagination = document.createElement("div");
-    pagination.classList.add(params.paginationClassName);
-    params.cardsContainer.append(pagination);
-
-    params.cardsContainer.classList.add("swiper-container");
-    params.cardsWrap.classList.add("swiper-wrapper");
-
-    params.cardsSlider = new Swiper(`.${params.cardsContainerName}`, {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      pagination: {
-        el: `.${params.cardsContainerName} .${params.paginationClassName}`
-      },
-
-      on: {
-        beforeInit() {
-          document.querySelectorAll(`.${params.card}`).forEach((el) => {
-            el.classList.add("swiper-slide");
-          });
+      params.cardsSlider = new Swiper(`.${params.cardsContainerName}`, {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: `.${params.cardsContainerName} .${params.paginationClassName}`
         },
 
-        beforeDestroy() {
-          this.slides.forEach((el) => {
-            el.classList.remove("swiper-slide");
-            el.removeAttribute("role");
-            el.removeAttribute("aria-label");
-          });
+        on: {
+          beforeInit() {
+            document.querySelectorAll(`.${params.card}`).forEach((el) => {
+              el.classList.add("swiper-slide");
+            });
+          },
 
-          this.pagination.el.remove();
+          beforeDestroy() {
+            this.slides.forEach((el) => {
+              el.classList.remove("swiper-slide");
+              el.removeAttribute("role");
+              el.removeAttribute("aria-label");
+            });
+
+            this.pagination.el.remove();
+          }
         }
+      });
+    }
+
+    function destroyMobileSlider(params) {
+      params.cardsSlider.destroy();
+      params.cardsContainer.classList.remove("swiper-container");
+      params.cardsWrap.classList.remove("swiper-wrapper");
+      params.cardsWrap.removeAttribute("aria-live");
+      params.cardsWrap.removeAttribute("id");
+    }
+
+    function setHiddenCards(params, windowWidth) {
+      const cards = document.querySelectorAll(`.${params.card}`);
+      let quantity = cards.length;
+
+      if (windowWidth > MOBILE_WIDTH && windowWidth < DESKTOP_WIDTH) {
+        quantity = 2;
       }
-    });
-  }
 
-  function destroyMobileSlider(params) {
-    params.cardsSlider.destroy();
-    params.cardsContainer.classList.remove("swiper-container");
-    params.cardsWrap.classList.remove("swiper-wrapper");
-    params.cardsWrap.removeAttribute("aria-live");
-    params.cardsWrap.removeAttribute("id");
-  }
-
-  function setHiddenCards(params, windowWidth) {
-    const cards = document.querySelectorAll(`.${params.card}`);
-    let quantity = cards.length;
-
-    if (windowWidth > MOBILE_WIDTH && windowWidth < DESKTOP_WIDTH) {
-      quantity = 2;
-    }
-
-    if (windowWidth >= DESKTOP_WIDTH) {
-      quantity = 3;
-    }
-
-    cards.forEach((card, i) => {
-      card.classList.remove(params.hiddenClass);
-      if (i >= quantity) {
-        card.classList.add(params.hiddenClass);
+      if (windowWidth >= DESKTOP_WIDTH) {
+        quantity = 3;
       }
-    });
-  }
 
-  function showCards(e) {
-    const cards = document.querySelectorAll(`.${sliderMobileParams.card}`);
-
-    e.target.style = "display: none";
-
-    cards.forEach((card) => {
-      card.classList.remove(sliderMobileParams.hiddenClass);
-    });
-  }
-
-  function checkWindowWidthMobile(params) {
-    const currentWidth = getWindowWidth();
-    btn.style = "";
-    params.cardsContainer = document.querySelector(
-      `.${params.cardsContainerName}`
-    );
-    params.cardsWrap = document.querySelector(`.${params.cardsWrapName}`);
-
-    if (
-      currentWidth <= MOBILE_WIDTH &&
-      (!params.cardsSlider || params.cardsSlider.destroyed)
-    ) {
-      activateMobileSlider(params);
-    } else if (currentWidth > MOBILE_WIDTH && params.cardsSlider) {
-      destroyMobileSlider(params);
+      cards.forEach((card, i) => {
+        card.classList.remove(params.hiddenClass);
+        if (i >= quantity) {
+          card.classList.add(params.hiddenClass);
+        }
+      });
     }
 
-    setHiddenCards(params, currentWidth);
-  }
+    function showCards(e) {
+      const cards = document.querySelectorAll(`.${sliderMobileParams.card}`);
 
-  checkWindowWidthMobile(sliderMobileParams);
-  btn.addEventListener("click", showCards);
+      e.target.style = "display: none";
 
-  window.addEventListener("resize", function () {
+      cards.forEach((card) => {
+        card.classList.remove(sliderMobileParams.hiddenClass);
+      });
+    }
+
+    function checkWindowWidthMobile(params) {
+      const currentWidth = getWindowWidth();
+      btn.style = "";
+      params.cardsContainer = document.querySelector(
+        `.${params.cardsContainerName}`
+      );
+      params.cardsWrap = document.querySelector(`.${params.cardsWrapName}`);
+
+      if (
+        currentWidth <= MOBILE_WIDTH &&
+        (!params.cardsSlider || params.cardsSlider.destroyed)
+      ) {
+        activateMobileSlider(params);
+      } else if (currentWidth > MOBILE_WIDTH && params.cardsSlider) {
+        destroyMobileSlider(params);
+      }
+
+      setHiddenCards(params, currentWidth);
+    }
+
     checkWindowWidthMobile(sliderMobileParams);
-  });
-})();
+    btn.addEventListener("click", showCards);
+
+    window.addEventListener("resize", function () {
+      checkWindowWidthMobile(sliderMobileParams);
+    });
+  })();
+});
 
 
 
@@ -460,7 +470,7 @@ $(function () {
 
 });
 
-// SWIPER
+// SWIPER издания
 
 let editionsSlider = new Swiper(".editions__swiper-content", {
   pagination: {
@@ -625,9 +635,5 @@ new JustValidate('.form', {
   },
   colorWrong: '#D11616'
 });
-
-
-// карточки события
-
 
 

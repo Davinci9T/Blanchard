@@ -42,8 +42,10 @@ a {
   color: inherit;
 }
 
+picture,
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -1076,11 +1078,8 @@ img {
 }
 
 .catalog__author-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  column-count: 3;
   align-self: flex-start;
-  max-height: 288px;
 }
 
 
@@ -1160,6 +1159,18 @@ img {
   margin-right: -50px;
 }
 
+.events-pagination {
+  text-align: center;
+}
+
+.events-pagination .swiper-pagination-bullet {
+  background-color: #cacaca;
+}
+
+.events-pagination .swiper-pagination-bullet-active {
+  background-color: #666;
+}
+
 .events__item {
   position: relative;
   display: flex;
@@ -1170,7 +1181,7 @@ img {
   height: auto;
 }
 
-.events__item.is-hidden {
+.events__item.hidden {
   display: none;
 }
 

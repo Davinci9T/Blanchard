@@ -8,7 +8,7 @@
 }
 
 .catalog__author-list {
-    max-height: 384px;
+    column-count: 2;
   }
 }
 
@@ -357,7 +357,7 @@
   }
 
   .catalog__author-list {
-    max-height: 288px;
+    column-count: 3;
   }
 
   .catalog__author-item {
@@ -632,7 +632,17 @@
 }
 
 
-@media (max-width: 717px) {
+@media (max-width: 600px) {
+
+  .container {
+    max-width: 500px;
+    padding: 0 50px;
+  }
+
+  .catalog__author-list {
+    column-count: 1;
+  }
+
   .events-swiper {
     flex-wrap: nowrap;
   }
