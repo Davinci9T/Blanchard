@@ -41,12 +41,14 @@
                 <li class="header__menu-item"><a href="#projects" class="header__menu-link">Проекты</a></li>
                 <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
               </ul>
-              <a href="" class="header__login">
-                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="currentColor" />
-                </svg>
-                <span>Войти</span>
-              </a>
+              <div class="header__login">
+                <a href="" class="header__login-link">
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="currentColor" />
+                  </svg>
+                  <span>Войти</span>
+                </a>
+              </div>
             </nav>
             <div class="header__nav-search">
               <button class="btn-reset header__search-btn" type="button" aria-label="Поиск по сайту" id="search">
@@ -955,6 +957,7 @@
               <div class="events__item events-slide">
                 <picture>
                   <source srcset="images/eventspic1.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic1.jpg" media="(max-width: 600px)">
                   <source srcset="images/eventspic1-768.jpg" media="(max-width: 989px)">
                   <source srcset="images/eventspic1-1024.jpg" media="(max-width: 1024px)">
                   <img src="images/eventspic1.jpg" alt="обложка карточки">
@@ -975,6 +978,7 @@
               <div class="events__item events-slide">
                 <picture>
                   <source srcset="images/eventspic2.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic2.jpg" media="(max-width: 600px)">
                   <source srcset="images/eventspic2-768.jpg" media="(max-width: 989px)">
                   <source srcset="images/eventspic2-1024.jpg" media="(max-width: 1024px)">
                   <img src="images/eventspic2.jpg" alt="обложка карточки">
@@ -994,6 +998,7 @@
               <div class="events__item events-slide">
                 <picture>
                   <source srcset="images/eventspic3.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic3.jpg" media="(max-width: 600px)">
                   <source srcset="images/eventspic3-768.jpg" media="(max-width: 989px)">
                   <source srcset="images/eventspic3-1024.jpg" media="(max-width: 1024px)">
                   <img src="images/eventspic3.jpg" alt="обложка карточки">
@@ -1013,6 +1018,7 @@
               <div class="events__item events-slide">
                 <picture>
                   <source srcset="images/eventspic4.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic4.jpg" media="(max-width: 600px)">
                   <source srcset="images/eventspic4-768.jpg" media="(max-width: 989px)">
                   <source srcset="images/eventspic4-1024.jpg" media="(max-width: 1024px)">
                   <img src="images/eventspic4.jpg" alt="обложка карточки">
@@ -1032,6 +1038,7 @@
               <div class="events__item events-slide">
                 <picture>
                   <source srcset="images/eventspic5.jpg" media="(min-width: 1025px)">
+                  <source srcset="images/eventspic5.jpg" media="(max-width: 600px)">
                   <source srcset="images/eventspic5-768.jpg" media="(max-width: 989px)">
                   <source srcset="images/eventspic5-1024.jpg" media="(max-width: 1024px)">
                   <img src="images/eventspic5.jpg" alt="обложка карточки">
@@ -1061,112 +1068,129 @@
       <div class="container">
         <h2 class="editions__title title">Издания</h2>
         <div class="editions__inner">
-          <div class="editions__checkbox editions__checkbox-one">
-            <h3 class="editions__category-title">Категории</h3>
-            <ul class="editions__category-list">
-              <li class="editions__item"><input type="checkbox" id="checkbox_1" class="editions__checkbox-input"><label class="editions__label" for="checkbox_1"> Бестселлеры </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_2" class="editions__checkbox-input"><label class="editions__label" for="checkbox_2"> Искусство </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_3" class="editions__checkbox-input"><label class="editions__label" for="checkbox_3"> Архитектура </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_4" class="editions__checkbox-input" checked><label class="editions__label" for="checkbox_4"> Дизайн </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_5" class="editions__checkbox-input"><label class="editions__label" for="checkbox_5"> Мода </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_6" class="editions__checkbox-input"><label class="editions__label" for="checkbox_6"> Детям </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_7" class="editions__checkbox-input"><label class="editions__label" for="checkbox_7"> Художественная <br> литература </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_8" class="editions__checkbox-input"><label class="editions__label" for="checkbox_8"> Публицистика </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_9" class="editions__checkbox-input"><label class="editions__label" for="checkbox_9"> Путеводители </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_10" class="editions__checkbox-input"><label class="editions__label" for="checkbox_10"> Философия </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_11" class="editions__checkbox-input"><label class="editions__label" for="checkbox_11"> Учебная литература </label></li>
-              <li class="editions__item"><input type="checkbox" id="checkbox_12" class="editions__checkbox-input"><label class="editions__label" for="checkbox_12"> Журналы и газеты </label></li>
-            </ul>
-          </div>
-          <div class="checkbox-container editions__checkbox editions__checkbox-two">
-            <h2 class="h2-click" tabindex="0">Категории</h2>
-            <ul class="editions__list-checkbox">
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Бестселлеры</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Искусство</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Архитектура</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Дизайн</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Мода</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Детям</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Художественная литература</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Публицистика</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Путеводители</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Философия</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Учебная литература</span>
-                </label>
-              </li>
-              <li class="editions__item-checkbox">
-                <label class="editions__label-checkbox">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="custom-checkbox"></span>
-                  <span class="custom-checkbox-text">Журналы и газеты</span>
-                </label>
-              </li>
-            </ul>
-          </div>
+          <form action="/" method="post" class="editions__form">
+            <div class="editions__form-inner questions">
+              <button class="heading js-check-heading" type="button">Категории</button>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-one">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Бестселлеры</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-two">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Искусство</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-three">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Архитектура</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-four" checked>
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Дизайн</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-five">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Мода</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-six">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Детям</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-seven">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Художественная литература</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-eight">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Публицистика</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-nine">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Философия</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-ten">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Учебная литература</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+
+              <label class="checkbox-wrap">
+                <input class="checkbox visually-hidden" type="checkbox" name="check-eleven">
+                <div class="checkbox-content">
+                  <span class="visual-check"></span>
+                  <span class="check-text">Журналы и газеты</span>
+                  <span class="close-icon"></span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editions__price">
+              <div class="editions__price-inner">
+                <fieldset>
+                  <legend class="editions__price-title">Цена</legend>
+                  <div class="price-section">
+                    <div class="input-group von">
+                      <span class="input-group-addon">От</span>
+                      <input type="number" class="form-control" placeholder="50" aria-label="введите цену от">
+                    </div>
+                    <div class="input-group bis">
+                      <span class="input-group-addon">до</span>
+                      <input type="number" class="form-control" placeholder="25 000" aria-label="введите цену до">
+                    </div>
+                    <span class="input-group-addon">руб.</span>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
           <div class="editions__swiper">
             <div class="editions-navigation">
               <button class="nav-btn button-prev" aria-label="К предыдущему слайду"></button>
@@ -1318,24 +1342,6 @@
                   </div>
                 </li>
               </div>
-            </div>
-          </div>
-          <div class="editions__price">
-            <div class="editions__price-inner">
-              <fieldset>
-                <legend class="editions__price-title">Цена</legend>
-                <div class="price-section">
-                  <div class="input-group von">
-                    <span class="input-group-addon">От</span>
-                    <input type="number" class="form-control" placeholder="50" aria-label="введите цену от">
-                  </div>
-                  <div class="input-group bis">
-                    <span class="input-group-addon">до</span>
-                    <input type="number" class="form-control" placeholder="25 000" aria-label="введите цену до">
-                  </div>
-                  <span class="input-group-addon">руб.</span>
-                </div>
-              </fieldset>
             </div>
           </div>
         </div>

@@ -175,11 +175,11 @@ img {
   font-weight: 600;
 }
 
-.header__login svg {
+.header__login-link svg {
   margin-right: 2px;
 }
 
-.header__login span {
+.header__login-link span {
   font-family: 'OpenSans-Light', sans-serif;
   font-size: 18px;
 }
@@ -1084,8 +1084,11 @@ img {
 
 
 .catalog__author-item {
+  margin-right: 29px;
+}
+
+.catalog__author-item:not(:first-child) {
   margin-top: 16px;
-  margin-right: 60px;
 }
 
 .content {
@@ -1390,10 +1393,8 @@ img {
 }
 
 .editions__price-inner {
-  position: absolute;
   width: 100%;
   left: 0;
-  bottom: 20px;
   font-weight: 600;
   line-height: 32px;
 }

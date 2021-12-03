@@ -5,7 +5,7 @@
 }
 
 .header__menu-link:hover,
-.header__login:hover  {
+.header__login-link:hover  {
   color: var(--heliotrope-color);
 }
 
@@ -15,7 +15,7 @@
 }
 
 .header__menu-link:focus-visible,
-.header__login:focus-visible,
+.header__login-link:focus-visible,
 .header__main-item-btn:focus-visible {
   background-color: var(--royal-purple-color);
   outline-offset: 0;
@@ -23,7 +23,7 @@
 }
 
 .header__main-item-btn:hover,
-.header__login:active {
+.header__login-link:active {
   color: var(--amethyst-color);
 }
 
