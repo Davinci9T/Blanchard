@@ -747,6 +747,11 @@
 }
 
 @media (max-width: 580px) {
+
+  .editions__form {
+    width: 100%;
+  }
+
   .questions {
     align-items: stretch;
     width: 100%;
@@ -847,7 +852,7 @@
   }
 
   .editions-item {
-    width: calc(100% / 2 -10px);
+    max-width: calc(100% / 2 - 30px);
     margin-bottom: 20px;
   }
 }

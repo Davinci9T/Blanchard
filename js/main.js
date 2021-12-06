@@ -398,52 +398,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // let editionsSlider = new Swiper(".editions__swiper-content", {
-  //   pagination: {
-  //     el: ".editions-pagination",
-  //     type: "fraction"
-  //   },
-  //   navigation: {
-  //     nextEl: ".button-next",
-  //     prevEl: ".button-prev"
-  //   },
-  //   breakpoints: {
-  //     1200: {
-  //       slidesPerView: 3,
-  //       slidesPerGroup: 3,
-  //       spaceBetween: 50,
-  //     },
-
-  //     769: {
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 2,
-  //       spaceBetween: 49,
-  //     },
-
-  //     718: {
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 2,
-  //       spaceBetween: 34,
-  //       grid: {
-  //         rows: 1,
-  //         fill: "row"
-  //       },
-  //     },
-
-  //     600: {
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 2,
-  //       spaceBetween: 0,
-  //       grid: {
-  //         rows: 4,
-  //         fill: "row"
-  //       },
-  //     },
-  //   }
-  // });
 
   (() => {
-    const MOBILE_WIDTH = 600;
+    const MOBILE_WIDTH = 580;
 
     const sliderParamsNotMobile = {
       sliderWrap: "editions__swiper",
