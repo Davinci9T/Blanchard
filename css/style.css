@@ -1080,6 +1080,7 @@ img {
 .catalog__author-list {
   column-count: 3;
   align-self: flex-start;
+  padding-top: 16px;
 }
 
 
@@ -1259,7 +1260,7 @@ img {
 }
 
 .editions__title {
-  margin-bottom: 16px;
+  margin-bottom: 3px;
   color: var(--white-color);
 }
 
@@ -1271,13 +1272,85 @@ img {
   color: var(--white-color);
 }
 
-.editions__checkbox-two {
-  display: none;
+.editions__category-title {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  padding: 13px 40px 13px 0;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  background-color: transparent;
 }
 
-.editions__category-title {
-  margin-bottom: 8px;
+.checkbox-content {
   line-height: 32px;
+}
+
+.checkbox-wrap {
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.checkbox-wrap:hover {
+  color: var(--heliotrope-color);;
+}
+
+.checkbox-wrap:hover .visual-check {
+  border-color: var(--heliotrope-color);;
+}
+
+.visual-check {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--white-color);
+  transition: border-color 0.3s ease;
+}
+
+.visual-check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--heliotrope-color);;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.checkbox:focus:not(:checked) ~ .checkbox-content .visual-check,
+.checkbox:checked ~ .checkbox-content .visual-check {
+  border-color: var(--heliotrope-color);
+}
+
+.checkbox:focus:not(:checked) ~ .checkbox-content .check-text,
+.checkbox:checked ~ .checkbox-content .check-text {
+  color: var(--heliotrope-color);
+}
+
+.checkbox:checked ~ .checkbox-content .visual-check::before {
+  opacity: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 .editions__item {
@@ -1343,7 +1416,7 @@ img {
   font-weight: 400;
 }
 
-.editions-item {
+.editions__item {
     min-height: 530px;
 }
 
@@ -1568,8 +1641,11 @@ input[type="number"]:focus {
   margin-bottom: 16px;
 }
 
-.contacts__inner {
+.contacts__wrap {
   border-top: 1px solid #cacaca;
+}
+
+.contacts__inner {
   display: flex;
 }
 
@@ -1690,3 +1766,4 @@ input[type="number"]:focus {
 .footer__social-item {
   margin-left: 19px;
 }
+

@@ -390,6 +390,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // EDITIONS =====================================================================================================================
 
+$(function () {
+  $('.huyna').on('click', function () {
+    $('.huyna').toggleClass('is-active');
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   $(function () {
@@ -400,13 +405,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   (() => {
-    const MOBILE_WIDTH = 580;
+    const MOBILE_WIDTH = 600;
 
     const sliderParamsNotMobile = {
       sliderWrap: "editions__swiper",
       cardsContainerName: "editions__swiper-content",
       cardsWrapName: "editions-wrapper",
-      card: "editions-item",
+      card: "editions__item",
       paginationClassName: "editions-pagination",
       navClassName: "editions-navigation",
       navBtnClassName: "nav-btn",
@@ -462,6 +467,31 @@ document.addEventListener('DOMContentLoaded', function () {
         navigation: {
           nextEl: `.${params.navNext}`,
           prevEl: `.${params.navPrev}`
+        },
+
+        breakpoints: {
+
+          601: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 34,
+            grid: {
+              rows: 1,
+              fill: "row"
+            },
+          },
+
+          769: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 49,
+          },
+
+          1200: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 50,
+          },
         },
 
         on: {
