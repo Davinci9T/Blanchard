@@ -628,8 +628,13 @@
     margin-right: 0;
   }
 
+  .hero {
+    padding: 45px 0 60px;
+  }
+
   .article {
     text-align: center;
+    padding: 0 50px;
   }
 
   .article__heading {
@@ -638,11 +643,16 @@
   }
 
   .article__description {
-    font-family: 'OpenSans-Light', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     margin-bottom: 50px;
+  }
+
+  .hero__btn {
+    padding: 14px 19px;
+    font-size: 12px;
+    line-height: 24px;
   }
 
   .catalog__item:not(:last-child) {
