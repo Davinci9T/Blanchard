@@ -623,9 +623,28 @@
     padding-left: 15px;
   }
 
+  .article {
+    text-align: center;
+  }
+
+  .article__heading {
+    font-size: 32px;
+  }
+
+  .article__description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16;
+  }
+
+  .catalog__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
   .editions {
     background-image: url(../images/editions-bg-320.jpg);
     background-attachment: fixed;
+    padding-bottom: 20px;
   }
 
   .editions-wrapper {
