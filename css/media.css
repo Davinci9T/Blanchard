@@ -623,6 +623,11 @@
     padding-left: 15px;
   }
 
+  .header__search-btn {
+    right: 15px;
+    margin-right: 0;
+  }
+
   .article {
     text-align: center;
   }
