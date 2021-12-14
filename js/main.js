@@ -597,9 +597,14 @@ var partnersSlide = new Swiper(".partners-swiper", {
       spaceBetween: 50,
     },
 
-    560: {
+    600: {
       slidesPerView: 2,
       spaceBetween: 34,
+    },
+
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50,
     },
   }
 });

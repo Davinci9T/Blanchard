@@ -695,17 +695,137 @@
     padding: 0 15px;
   }
 
+  .header__menu-link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .header__menu-list {
+    margin-bottom: 30px;
+  }
+
+  .header__login-link {
+    padding: 12px 30px;
+  }
+
+  .about {
+    padding: 50px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .about__descr {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .gallery {
+    padding: 50px 0;
+  }
+
+  .gallery__filter, .gallery__descr, .gallery__descr-info {
+    width: 100%;
+  }
+
+  .gallery-content {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+
+  .slides-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .content-navigation {
+    align-items: center;
+    align-self: center;
+    width: 130px;
+  }
+
+  .button-prev,
+  .pagination {
+    margin-right: 11px;
+  }
+
+  .gallery__descr-info {
+    position: relative;
+    bottom: 0;
+  }
+
+  .catalog {
+    padding: 50px 0;
+  }
+
+  .catalog__header {
+    margin-bottom: 20px;
+  }
+
+  .tabs__btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tabs__btn::before {
+    top: -8px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+  }
+
+  .catalog__text {
+    display: none;
+  }
+
+  .catalog__data {
+    padding: 20px 120px 21px 0;
+  }
+
+  .catalog__data-heading {
+    font-size: 18px;
+  }
+
+  .head-icon {
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg);
+  }
+
+  .catalog__data.ui-accordion-header-active .head-icon {
+    transform: rotate(-225deg);
+  }
+
+  .head-icon::before,
+  .head-icon::after {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    margin: 0;
+    width: 7px;
+    height: 7px;
+  }
+
   .catalog__author-list {
     column-count: 1;
   }
 
+  .events {
+    padding-bottom: 50px;
+  }
+
   .events-swiper {
     flex-wrap: nowrap;
+    margin-bottom: 0;
   }
 
   .events__item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .events__btn {
@@ -818,10 +938,23 @@
 
   .editions__item {
     max-width: calc(100% / 2 - 15px);
-    margin-bottom: 20px;
+    margin-bottom: 67px;
+    min-height: auto;
   }
 
   .editions__img {
     width: 100%;
+  }
+
+  .footer__inner {
+    flex-direction: column-reverse;
+  }
+
+  .footer__social-list {
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    padding: 20px 0;
   }
 }

@@ -880,6 +880,7 @@ img {
   height: 44px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   transition: box-shadow .2s ease;
 }
 
