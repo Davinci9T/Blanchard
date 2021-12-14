@@ -240,16 +240,16 @@
   outline: 2px solid var(--amethyst-color);
 }
 .contacts__social-link:focus-visible,
-.footer__sobtn:focus-visible{
+.footer__link:focus-visible{
   outline: none;
 }
 
-.footer__sobtn:hover path,
-.footer__sobtn:focus-visible path {
+.footer__link:hover path,
+.footer__link:focus-visible path {
   fill: var(--white-color);
 }
 
-.footer__sobtn:active path {
+.footer__link:active path {
   fill: var(--amethyst-color);
 }
 

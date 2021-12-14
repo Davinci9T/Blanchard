@@ -271,7 +271,7 @@
     margin-right: 30px;
   }
 
-  .footer__sobtn svg,
+  .footer__link svg,
   .contacts__social-link svg {
     width: 60px;
     height: 60px;
@@ -946,6 +946,27 @@
     width: 100%;
   }
 
+  .contacts__wrap {
+    border: none;
+  }
+
+  .contacts__descr {
+    padding: 20px 0;
+  }
+
+  .contacts__form-data {
+    width: 100%;
+  }
+
+  .contacts__text {
+    font-size: 18px;
+  }
+
+  .footer__link svg, .contacts__social-link svg {
+    width: 50px;
+    height: 50px;
+  }
+
   .footer__inner {
     flex-direction: column-reverse;
   }
@@ -953,6 +974,10 @@
   .footer__social-list {
     margin-bottom: 20px;
   }
+
+  .footer__social-item:first-child {
+    margin-left: 0;
+}
 
   .footer {
     padding: 20px 0;
