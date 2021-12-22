@@ -104,7 +104,7 @@ let gallerySlider = new Swiper(".gallery-swiper", {
       },
     },
 
-    560: {
+    600: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       grid: {

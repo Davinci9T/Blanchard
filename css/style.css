@@ -811,7 +811,6 @@ img {
   height: 100%;
 }
 
-
 .slide-item picture::before {
   content: "";
   position: relative;
