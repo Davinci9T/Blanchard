@@ -84,7 +84,6 @@ const swiperHero = new Swiper('.hero-swiper', {
 // GALLERY ===============================================================================================
 
 let gallerySlider = new Swiper(".gallery-swiper", {
-  spaceBetween: 34,
   pagination: {
     el: ".pagination",
     type: "fraction"
@@ -94,6 +93,15 @@ let gallerySlider = new Swiper(".gallery-swiper", {
     prevEl: ".button-prev"
   },
   breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+      grid: {
+        rows: 2,
+        fill: "row"
+      },
+    },
 
     600: {
       slidesPerView: 2,
@@ -102,21 +110,10 @@ let gallerySlider = new Swiper(".gallery-swiper", {
         rows: 2,
         fill: "row"
       },
-
-      1200: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
-        grid: {
-          rows: 2,
-          fill: "row"
-        },
-      },
-
-
     },
   },
 
+  spaceBetween: 34,
   a11y: false,
 });
 
