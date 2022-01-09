@@ -389,12 +389,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // EDITIONS =====================================================================================================================
 
-$(function () {
-  $('.huyna').on('click', function () {
-    $('.huyna').toggleClass('is-active');
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   $(function () {
     $('.js-check-heading').on('click', function () {
@@ -419,7 +413,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     function getWindowWidth() {
-      console.log(document.body.scrollWidth);
       return Math.max(
         document.body.scrollWidth,
         document.documentElement.scrollWidth,
