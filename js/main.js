@@ -170,7 +170,12 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   });
 });
 
-
+$(function () {
+  $('.dropdown__list-item').on('click', function () {
+    $('.dropdown__button').removeClass('dropdown__button--active');
+    $('.dropdown__list').removeClass('dropdown__list--visible');
+  })
+})
 // TABS
 
 

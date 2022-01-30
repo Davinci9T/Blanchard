@@ -322,6 +322,12 @@
     width: 100%;
   }
 
+  .dropdown__list {
+    background-color: #18171B;
+    z-index: 2;
+    opacity: 0.9;
+  }
+
   .content-swiper {
     margin-top: 50px;
     width: 100%;
